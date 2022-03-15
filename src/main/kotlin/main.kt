@@ -2,12 +2,10 @@ fun main() {
     val buyPastMonth = true
     var buyThisMonth = 15000.0
 
-    if ((buyThisMonth > 1000) && (buyThisMonth <= 10000)) {
+    if (buyThisMonth <= 10000) {
         buyThisMonth -= 100
         println("==> скидка при покупке свыше 1000 р. -> 100 р.")
-    }
-
-    if (buyThisMonth > 10000) {
+    } else if (buyThisMonth > 1000) {
         println("==> скидка 5% -> ${buyThisMonth * 0.05} р.")
         buyThisMonth -= (buyThisMonth * 0.05)
     }
